@@ -218,32 +218,38 @@ Standardized bedrooms:
 
 \[ \text{standardized bedrooms} = \frac{6 - 4}{0.816496581} = \frac{2}{0.816496581} \approx 2.45 \]
 
-### Step 2: Compute the Predicted Value (Normalized)
+### Step 2: Make Prediction
 
-Now, we compute the normalized price using the theta values:
+We use the normalized data and multiply it with the corresponding theta values, and add the mean of the target variable:
 
-\[ \text{normalized price} = \theta[0] + \theta[1] \times \text{standardized area} + \theta[2] \times \text{standardized bedrooms} \]
+\[
+\hat{y} = \theta_0 + \theta_1 \cdot (\text{standardized area}) + \theta_2 \cdot (\text{standardized bedrooms}) 
+\]
 
-\[ \text{normalized price} = 2.82814137 \times 10^{-16} + 0.695395195 \times 2.58 + 0.2936679 \times 2.45 \]
+\[
+\hat{y} = 2.82814137e-16 + (6.95395195e-01 \cdot 2.58) + (2.93667900e-01 \cdot 2.45) 
+\]
 
-\[ \text{normalized price} \approx 0 + 1.793 + 0.720 \]
+\[
+\hat{y} \approx 1.79 + 0.72 = 2.51
+\]
 
-\[ \text{normalized price} \approx 2.513 \]
+Then, we convert it back to the original scale using the y_std and y_mean.
 
-### Step 3: Denormalization
+\[
+\text{Predicted Price} = \hat{y} \cdot y_{\text{std}} + y_{\text{mean}} = 2.51 \cdot 127202.81268728123 + 591666.6666666666
+\]
 
-Finally, we denormalize the normalized price using y_mean and y_std:
+\[
+\text{Predicted Price} \approx 318153.57 + 591666.67 = 909820.24
+\]
 
-\[ \text{price} = (\text{normalized price} \times y_{\text{std}}) + y_{\text{mean}} \]
+### Conclusion
 
-\[ \text{price} = (2.513 \times 127202.81268728123) + 591666.6666666666 \]
-
-\[ \text{price} \approx 319116.84 + 591666.67 = 910783.51 \]
-
-### Final Predicted Price:
-
-The predicted price for an area of 5000 sqft and 6 bedrooms is approximately $910,783.51, which matches closely with the previous prediction.
+The predicted price for a house with an area of 5000 square feet and 6 bedrooms is approximately $909,820.
 
 ---
 
-Feel free to use this README.md in your GitHub repository! 🚀
+This `README.md` can be used in your repository to explain the concepts of normalization, gradient descent, and how they apply to linear regression.
+
+You can now upload this file to your GitHub repository to showcase your understanding and work on linear regression!
