@@ -32,7 +32,9 @@ X_std for Bedrooms ≈ 0.58
 3️⃣ **Normalize the Numbers:**  
 We use the formula:
 
-\[ X_{\text{normalized}} = \frac{X - \text{mean}}{\text{std}} \]
+\[
+X_{\text{normalized}} = \frac{X - \text{mean}}{\text{std}}
+\]
 
 For Area:
 
