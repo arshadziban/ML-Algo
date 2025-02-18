@@ -4,9 +4,4 @@ This repository contains implementations of various Machine Learning algorithms.
 
 ## Setup and Installation
 
-To run the code in this repository, ensure you have Python installed on your system along with the necessary libraries. You can install the required dependencies using the following steps:
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/ML-Algo.git
-   cd ML-Algo
+To run the code in this repository, ensure you have Python installed on your system along with the necessary libraries. You can install the required dependencies using the following steps
